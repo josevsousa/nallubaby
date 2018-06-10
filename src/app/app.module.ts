@@ -1,5 +1,8 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpModule } from "@angular/http";
+import { SharedModule } from "./shared/shared.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
 import { AngularFireModule } from "angularfire2";
@@ -24,6 +27,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { BannerHomeComponent } from './components/banner-home/banner-home.component';
 import { SocialComponent } from './components/social/social.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -33,11 +37,16 @@ import { SocialComponent } from './components/social/social.component';
     NotFoundPageComponent,
     UserProfileComponent,
     BannerHomeComponent,
-    SocialComponent
+    SocialComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserAnimationsModule,
     AppRoutingModule,
+    SharedModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
     ModalModule.forRoot(),
     ButtonsModule.forRoot(),
     CarouselModule.forRoot(),
